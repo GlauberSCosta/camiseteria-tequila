@@ -10,4 +10,7 @@
 			data: { confirm: "Tem certeza que deseja confirmar 	#{produto.nome}"
 					} %>
 			</td>
+			<td>
+				<%= link_to "Alterar", edit_produto_path(produto), class: :"btn btn-default" %>
+			</td>
 		</tr>
