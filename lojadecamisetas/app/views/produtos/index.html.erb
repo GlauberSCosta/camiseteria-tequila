@@ -1,0 +1,36 @@
+
+<% if flash[:notice] %>
+	<div class="alert alert-success" role="alert"> 
+		<%= flash[:notice]%>
+	</div>
+<% end %>
+	
+<table class="table table-bordered">
+
+	<thead>
+		<tr>
+			<td>Nome</td>
+			<td>Descrição</td>
+			<td>Preço</td>
+			<td>Remover</td>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @produtos_por_nome %>
+	</tbody>
+</table>
+</body>
+<table  class="table table-bordered">
+	<thead>
+		<tr>
+			<td>Nome</td>
+			<td>Descrição</td>
+			<td>Preço</td>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @produtos_por_preco  %>
+	</tbody>
+</table>
+	
+<%=	link_to "Criar novo produto", new_produto_path 	  %>

@@ -1,0 +1,13 @@
+		<tr>
+			<td><%= produto.nome%></td>
+			<td><%= produto.descricao%></td>
+			<td><%= produto.preco%></td>
+			<td>
+				<%= button_to "Remover",
+								 produto, 
+						method: :delete,
+		class: :"btn btn-danger",
+			data: { confirm: "Tem certeza que deseja confirmar 	#{produto.nome}"
+					} %>
+			</td>
+		</tr>
